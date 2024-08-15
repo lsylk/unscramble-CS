@@ -34,7 +34,7 @@ As 2 is negligible, and for simplicity n+m will be n in big O notation.
 Saving n amount of phone numbers in the phone_book and saving one total_contacts is 1. 
 As n gets bigger 1 will be negligible.
 
-------------------------------- Task 1 Start ---------------------------
+------------------------------- Task 1 End ---------------------------
 
 
 ------------------------------- Task 2 Start ---------------------------
@@ -50,7 +50,7 @@ n is the space required to save all the entries in the call_duration dictionary 
 since this dictionary doesn't grow in size it is considered constant. To simplify things as n gets larger 1 is negligible,
 hence -> O(n)
 
-------------------------------- Task 2 Start ---------------------------
+------------------------------- Task 2 End ---------------------------
 
 ------------------------------- Task 3 Start ---------------------------
 
@@ -68,7 +68,7 @@ As nlog(n) get larger, the other values become negligible, hence O(nlog(n))
 3 variables that are constant and n where represents the size of the set. 
 As the set gets larger the other variables get negligible.
 
-------------------------------- Task 3 Start ---------------------------
+------------------------------- Task 3 End ---------------------------
 
 ------------------------------- Task 4 Start ---------------------------
 
@@ -85,6 +85,6 @@ O(nlog(n)) is bigger than 2n +_ 2m, hence in big O it is considered O(nlog(n)).
 where n is the number of telemarketers saved inside the set and 
 m is the number of leads saved inside the set
 
-------------------------------- Task 4 Start ---------------------------
+------------------------------- Task 4 End ---------------------------
 
 
