@@ -98,6 +98,8 @@ for call in calls:
     if "("  in call[1] and ")" in call[1]:
       code = sanitize_area_codes(call[1])
       area_codes.add(code) 
+    if call[1].startswith(('7','8','9')):
+      area_codes.add(call[1][0:4])
 
 # Part A Solution
 print(f"The numbers called by people in Bangalore have codes: ")
