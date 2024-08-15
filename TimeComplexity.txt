@@ -54,14 +54,14 @@ hence -> O(n)
 
 ------------------------------- Task 3 Start ---------------------------
 
-## Time Complexity: O(n + m + l + 4) -> O(n)
+## Time Complexity: O(n + m + nlog(n) + 4) -> O(nlog(n))
 There is the main for loop where n represents the lengths of calls.
 Inside the function of sanitize_area_codes there is split which iterates through code to split it, 
 and the replacement of ( is constant as it is always in index 0.
-l represents the number of area codes that need to be printed out. 
+nlog(n) represents the number of area codes that need to be printed out and sorted. 
 there are 3 initializations and 1 variable calculation which are constant. 
 
-As n get larger, the other values become negligible, hence O(n)
+As nlog(n) get larger, the other values become negligible, hence O(nlog(n))
 
 
 ## Space Complexity: O(n + 3) -> O(n)
@@ -72,14 +72,14 @@ As the set gets larger the other variables get negligible.
 
 ------------------------------- Task 4 Start ---------------------------
 
-## Time Complexity: O(n + m + k + j + l + p 3) -> O(n)
-There are 4 iterations where n and m represents the number of calls to filter out the leads and telemarketers, k and J
+## Time Complexity: O(2n + 2m + nlog(n) + p 3) -> O(2n + 2m + nlog(n)) -> O(nlog(n))
+There are 4 iterations where 2n represents the number of calls to filter out the leads and telemarketers, 2m
 represent the number of texts to filter out the leads and telemarketers,
-l is the number of telemarketers printed.
+nlog(n)  is the number of telemarketers printed and sorted.
 Initialization of 2 new set is 2 and sorted_telemarketers is 1
 There is a sorting happening in the set of telemarketers hence that is another loop, where p is the length of the number of sorted_telemarketers
 
-As n and m gets larger in size the other values become negligible, hence O(n + m), in big O it is considered O(n).
+O(nlog(n)) is bigger than 2n +_ 2m, hence in big O it is considered O(nlog(n)).
 
 ## Space Complexity: O(n + m) -> O(n)
 where n is the number of telemarketers saved inside the set and 
