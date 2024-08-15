@@ -29,16 +29,22 @@ The list of numbers should be print out one per line in lexicographic order with
 # Telemarketers' numbers have no parentheses or space, but they start
 # with the area code 140.
 
+leads = set()
 telemarketers = set()
+
 for call in calls:
-    if call[0].startswith("140") and call[0].startswith("140") not in telemarketers:
+    leads.add(call[1])
+
+for text in texts:
+    leads.add(text[1])
+
+for call in calls:
+    if not call[0] in leads:
         telemarketers.add(call[0])
 
 for text in texts:
-    if (text[0]) in telemarketers:
+    if text[0] in telemarketers:
         telemarketers.remove(text[0])
-    if (text[1]) in telemarketers:
-        telemarketers.remove(text[1])
 
 
 sorted_telemarketers = sorted(telemarketers)

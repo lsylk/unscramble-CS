@@ -72,15 +72,18 @@ As the set gets larger the other variables get negligible.
 
 ------------------------------- Task 4 Start ---------------------------
 
-## Time Complexity: O(n + m + k + j + 2) -> O(n)
-There are 3 iterations where n represents the number of calls, m the number of texts and k the number of telemarketers printed.
-Initialization of a new set is 1 and sorted_telemarketers is 1
-There is a sorting happening in the set of telemarketers hence that is another loop, where j is the length of the number of sorted_telemarketers
+## Time Complexity: O(n + m + k + j + l + p 3) -> O(n)
+There are 4 iterations where n and m represents the number of calls to filter out the leads and telemarketers, k and J
+represent the number of texts to filter out the leads and telemarketers,
+l is the number of telemarketers printed.
+Initialization of 2 new set is 2 and sorted_telemarketers is 1
+There is a sorting happening in the set of telemarketers hence that is another loop, where p is the length of the number of sorted_telemarketers
 
-As n gets larger in size the other values become negligible, hence O(n).
+As n and m gets larger in size the other values become negligible, hence O(n + m), in big O it is considered O(n).
 
-## Space Complexity: O(n):
-where n is the number of telemarketers saved inside the set. 
+## Space Complexity: O(n + m) -> O(n)
+where n is the number of telemarketers saved inside the set and 
+m is the number of leads saved inside the set
 
 ------------------------------- Task 4 Start ---------------------------
 
