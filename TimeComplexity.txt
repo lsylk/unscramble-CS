@@ -1,0 +1,87 @@
+Time complexity and space complexity:
+
+Note: the print statements where not taken into account for this analysis unless a for loop was used to print a list of values.
+
+------------------------------- Task 0 Start ---------------------------
+
+
+## Time Complexity: O(9) -> O(1)
+indexing the first record text is 1
+indexing the last record call is 1
+accessing incoming_num_text, answering_num_text, timestamp_text is 3 or could be 1 from destructuring depending how to count it. 
+accessing incoming_num_call, answering_num_call, timestamp_call, duration_call is 4 or could be 1 from destructuring depending how to count it. 
+
+The performance is constant as nothing changes in size hence O(1)
+
+## Space Complexity: O(4) -> O(1) 
+It is storing first_record_text, last_record_calls and the 2 tuples.
+
+The space is not growing hence is it constant.
+
+------------------------------- Task 0 End -----------------------------
+
+
+------------------------------- Task 1 Start ---------------------------
+
+## Time Complexity: O(n + m + 2) -> O(n):
+Iterating 2 separate for loops 1 with length n representing the number of calls and m representing the number of texts
+and +2 refers to the initialization of the phone_book and total_contacts.
+
+As 2 is negligible, and for simplicity n+m will be n in big O notation. 
+
+## Space Complexity: O(n + 1) -> O(n)
+
+Saving n amount of phone numbers in the phone_book and saving one total_contacts is 1. 
+As n gets bigger 1 will be negligible.
+
+------------------------------- Task 1 Start ---------------------------
+
+
+------------------------------- Task 2 Start ---------------------------
+
+## Time Complexity: O(n + m + 2) -> O(n)
+Iterating 2 separate for loops 1 with length n representing the call, and m representing the durations, and 
+adds 2 for initialization for the call_duration dictionary and the longest_call dictionary.
+
+As n or m becomes larger, 2 is negligible, and for simplicity n+m will be n in big O notation. 
+
+## Space Complexity: O(n + 1) -> O(n)
+n is the space required to save all the entries in the call_duration dictionary and 1 represent the longest_call dictionary, 
+since this dictionary doesn't grow in size it is considered constant. To simplify things as n gets larger 1 is negligible,
+hence -> O(n)
+
+------------------------------- Task 2 Start ---------------------------
+
+------------------------------- Task 3 Start ---------------------------
+
+## Time Complexity: O(n + m + l + 4) -> O(n)
+There is the main for loop where n represents the lengths of calls.
+Inside the function of sanitize_area_codes there is split which iterates through code to split it, 
+and the replacement of ( is constant as it is always in index 0.
+l represents the number of area codes that need to be printed out. 
+there are 3 initializations and 1 variable calculation which are constant. 
+
+As n get larger, the other values become negligible, hence O(n)
+
+
+## Space Complexity: O(n + 3) -> O(n)
+3 variables that are constant and n where represents the size of the set. 
+As the set gets larger the other variables get negligible.
+
+------------------------------- Task 3 Start ---------------------------
+
+------------------------------- Task 4 Start ---------------------------
+
+## Time Complexity: O(n + m + k + j + 2) -> O(n)
+There are 3 iterations where n represents the number of calls, m the number of texts and k the number of telemarketers printed.
+Initialization of a new set is 1 and sorted_telemarketers is 1
+There is a sorting happening in the set of telemarketers hence that is another loop, where j is the length of the number of sorted_telemarketers
+
+As n gets larger in size the other values become negligible, hence O(n).
+
+## Space Complexity: O(n):
+where n is the number of telemarketers saved inside the set. 
+
+------------------------------- Task 4 Start ---------------------------
+
+

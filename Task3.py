@@ -44,3 +44,69 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+# bangalore_call_records = []
+
+# for call in calls:
+#   if "(080)" in call[0]:
+#     bangalore_call_records.append(call)
+
+# area_codes = set()
+
+# def sanitize_area_codes(code):
+#   return code.split(")")[0].replace("(", "")
+
+# for call in bangalore_call_records:
+#   if "("  in call[1] and ")" in call[1]:
+#     code = sanitize_area_codes(call[1])
+#     area_codes.add(code)
+
+# # Part A Solution
+# print(f"The numbers called by people in Bangalore have codes: ")
+# for area_code in sorted(area_codes):
+#   print(area_code, sep = '\n')
+
+
+# total_bangalore_calls = len(bangalore_call_records)
+
+# fixed_lines_counter = 0
+# for record in bangalore_call_records:
+#   if "(080)" in record[1]:
+#     fixed_lines_counter +=1
+
+# percentage_call = round((fixed_lines_counter / total_bangalore_calls) * 100, 2)
+
+# # Part B Solution
+# print("", sep = '\n')
+# print(f"{percentage_call} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+
+############ REFACTORING:
+
+total_bangalore_calls = 0
+fixed_lines_counter = 0
+area_codes = set()
+
+def sanitize_area_codes(code):
+  return code.split(")")[0].replace("(", "")
+
+for call in calls:
+  if "(080)" in call[0]:
+    total_bangalore_calls += 1
+    if "(080)" in call[1]:
+      fixed_lines_counter +=1
+    if "("  in call[1] and ")" in call[1]:
+      code = sanitize_area_codes(call[1])
+      area_codes.add(code) 
+
+# Part A Solution
+print(f"The numbers called by people in Bangalore have codes: ")
+for area_code in sorted(area_codes):
+  print(area_code, sep = '\n')
+  
+
+percentage_call = round((fixed_lines_counter / total_bangalore_calls) * 100, 2)
+
+# Part B Solution
+print("", sep = '\n')
+print(f"{percentage_call} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
